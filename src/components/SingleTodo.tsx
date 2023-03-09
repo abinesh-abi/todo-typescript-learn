@@ -13,13 +13,27 @@ type props ={
 }
 
 const SingleTodo = ({todo,todos,setTodos}:props) => {
+
+  const handleDone = (id:number)=>{
+    setTodos(todos.map(todo=>todo.id === id ?{...todo,isDone:!todo.isDone}:todo))
+  }
+  const handleDelete = (id:number)=>{
+    setTodos(todos.filter(todo=>todo.id !== id ))
+  }
+
   return (
     <form className='todos__single'>
+      {
+        todo.isDone?
+        <s className="todos__single--text">{todo.todo}</s>
+        :
         <span className="todos__single--text">{todo.todo}</span>
+
+      }
         <div>
             <span className="icon">{<GrEdit />}</span>
-            <span className="icon">{<FaTrashAlt />}</span>
-            <span className="icon">{<GiCheckMark />}</span>
+            <span className="icon" onClick={()=>handleDelete(todo.id)}>{<FaTrashAlt />}</span>
+            <span className="icon" onClick={()=>handleDone(todo.id)}>{<GiCheckMark />}</span>
 
         </div>
 
