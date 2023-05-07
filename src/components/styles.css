@@ -113,7 +113,16 @@
   font-size: 25px;
   cursor: pointer;
 }
-.single__input{
+.text-red {
+  color: red;
+}
+.text-green {
+  color: green;
+}
+.text-blue {
+  color: blue;
+}
+.single__input {
   background-color: rgb(50, 195, 205);
   color: white;
 }
