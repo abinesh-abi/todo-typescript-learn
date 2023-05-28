@@ -24,6 +24,7 @@ const App: React.FC = () => {
       {/* <span className="heading">Taskify</span> */}
       <span className="heading">Todo Lists</span>
       <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      {todos.length !== 0 && <h2>Todos</h2>}
       <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
