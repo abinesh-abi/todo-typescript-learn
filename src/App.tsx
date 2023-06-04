@@ -22,9 +22,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
       {/* <span className="heading">Taskify</span> */}
-      <span className="heading">Todo Lists</span>
+      <span className="heading">Todo</span>
       <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
-      {todos.length !== 0 && <h2>Todos</h2>}
+      {todos.length !== 0 && <h2>Todos List</h2>}
       <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
